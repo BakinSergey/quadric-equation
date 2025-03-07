@@ -11,6 +11,9 @@ https://typst.app/universe/
 * HotReload viewer для VS Code:
 https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist
 
+* Cool Math Mode Tutorial
+https://sitandr.github.io/typst-examples-book/book/about.html
+
 ----
 
 * Компиляции документа:
