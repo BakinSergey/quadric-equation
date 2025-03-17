@@ -7,11 +7,12 @@
 
 #let N = 2000
 
-
-#grid(
-  columns: (1fr, 1fr), gutter: 20pt,
-  align(left)[
-    #for i in range(0, calc.floor(N/2)) {
+#let col_of_solutions(
+  StNum: int,
+  FnNum: int
+) = [
+  #align(left)[
+    #for i in range(StNum, FnNum) {
       let rng = gen-rng-f(i)
       let a = ()
       let (rng, a) = integers-f(rng, low: -20, high: 20, size: 4)
@@ -19,17 +20,13 @@
       [== Уравнение #i]
       quadric_solution(A:A,  B:B,  C:C,  E:E)
     }
-  ],
-  align(left)[
-    #for i in range(calc.ceil(N/2), N) {
-      let rng = gen-rng-f(i)
-      let a = ()
-      let (rng, a) = integers-f(rng, low: -20, high: 20, size: 4)
-      let (A, B, C, E) = a
-      [== Уравнение  #i]
-      quadric_solution(A:A,  B:B,  C:C,  E:E)
-    }
   ]
+ ]
+
+#grid(
+  columns: (1fr, 1fr), gutter: 20pt,
+  col_of_solutions(StNum: 0, FnNum: calc.floor(N/2)),
+  col_of_solutions(StNum: calc.ceil(N/2), FnNum: N)
 )
 
 
