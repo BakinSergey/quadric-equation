@@ -1,5 +1,5 @@
-#set page(margin: (left: 3cm, right: 1cm, y: 2cm))
-#set text(size: 14pt, font: "Times New Roman", lang: "ru")
+#set page(margin: (left: 1cm, right: 1cm, top: 1.5cm, bottom: 1.5cm))
+#set text(size: 13pt, font: "Arial", lang: "ru")
 #set par(justify: true)
 
 #import "@preview/suiji:0.3.0": *

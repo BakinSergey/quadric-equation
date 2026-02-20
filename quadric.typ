@@ -51,7 +51,7 @@
    if not c_0  {
     _cs = if C < 0 [$minus$] else [$plus$]
     _C = calc.abs(C)
-   [получаем значение свободного члена: $c = #C$ ]
+   [получаем значение свободного члена: \ $c = #C$ ]
    } else [$inline(#a_part #b_part =0) $]
 
 } else [
@@ -114,8 +114,8 @@
     let x2 = calc.round((-B - calc.sqrt(D))/(2*A), digits: 3)
 
     [дискриминант положительный - уравнение имеет два корня: \
-    $x_1 = frac(-"b"+sqrt("D"),2 dot "a") = frac(-(#B)+ sqrtD,2 dot #A) = #x1 \
-     x_2 = frac(-"b"-sqrt("D"),2 dot "a") = frac(-(#B)- sqrtD,2 dot #A) = #x2$
+    $x_1 = display(frac(-"b"+sqrt("D"),2 dot "a")) = display(frac(-(#B)+ sqrtD,2 dot #A)) = #x1 \
+     x_2 = display(frac(-"b"-sqrt("D"),2 dot "a")) = display(frac(-(#B)- sqrtD,2 dot #A)) = #x2$
 
     ]
   }
